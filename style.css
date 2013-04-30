@@ -1,6 +1,9 @@
-.task_description {
+#task_description {
   font-size: 20px;
+  width: 200px;
+  font-family: 'Nunito', sans-serif;
 }
+
 
 .checked {
   color: red;
@@ -15,13 +18,21 @@ body {
   background-color: #F38630;
   color: #E0E4CC;
   font-family: 'Nunito', sans-serif;
-  text-align: center;
+  margin-left: 300px;
   font-size: 30px;
 }
 
 h1 {
   font-size: 100px;
   font-style: bold;
+}
+
+.check_task {
+  margin-left: 5px;
+}
+
+.delete {
+  margin-left: 25px;
 }
 
 .trash {

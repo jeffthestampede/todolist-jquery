@@ -1,5 +1,6 @@
 $(document).ready( function() {
-  $('#add_task').click( function() {
+  $('#add_task').click( function(event) {
+    event.preventDefault();
     var taskDescription = $('#task_description').val();
     $('.todo').append(
         '<li class="task_description">'
@@ -10,17 +11,17 @@ $(document).ready( function() {
     $('#task_description').val('');
     $("input:checkbox").click( function() {
       var todo = $(this).parent();
-      if ($(this).is (":checked")) {
+      if ($(this).is(":checked")) {
         $(".complete").append(todo);
-        todo.addClass("checked");
+        todo.addClass("checked", 800, "easeInBack");
       } else {
         $(".todo").append(todo);
-        todo.removeClass("checked");
+        todo.removeClass("checked", 800, "easeInBack");
       }
     });
     $(".delete").click(function() {
-        $(this).parent().remove();
+        var random = Math.random();
+        $(this).parent().css("list-style-type", "none").effect("explode", 2000).remove();
      });
-  return false;
   });
 });
