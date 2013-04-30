@@ -1,0 +1,29 @@
+.task_description {
+  font-size: 20px;
+}
+
+.checked {
+  color: red;
+  text-decoration: line-through;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: #F38630;
+  color: #E0E4CC;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  font-size: 30px;
+}
+
+h1 {
+  font-size: 100px;
+  font-style: bold;
+}
+
+.trash {
+  height: 20px;
+}

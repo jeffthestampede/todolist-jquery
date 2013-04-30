@@ -1,0 +1,26 @@
+$(document).ready( function() {
+  $('#add_task').click( function() {
+    var taskDescription = $('#task_description').val();
+    $('.todo').append(
+        '<li class="task_description">'
+        + '<input type="checkbox" class="check_task" name="check_task"></input>'
+        + taskDescription
+        + '<button class="delete"><img class="trash" src="trash.svg"/></button></li>'
+      );
+    $('#task_description').val('');
+    $("input:checkbox").click( function() {
+      var todo = $(this).parent();
+      if ($(this).is (":checked")) {
+        $(".complete").append(todo);
+        todo.addClass("checked");
+      } else {
+        $(".todo").append(todo);
+        todo.removeClass("checked");
+      }
+    });
+    $(".delete").click(function() {
+        $(this).parent().remove();
+     });
+  return false;
+  });
+});
