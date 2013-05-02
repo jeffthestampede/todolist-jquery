@@ -9,6 +9,7 @@ $(document).ready( function() {
         + '<button class="delete"><img class="trash" src="trash.svg"/></button></li>'
       );
     $('#task_description').val('');
+    var deleteButton = $(".delete");
     $("input:checkbox").click( function() {
       var todo = $(this).parent();
       if ($(this).is(":checked")) {
@@ -19,7 +20,7 @@ $(document).ready( function() {
         todo.removeClass("checked", 800, "easeInBack");
       }
     });
-    $(".delete").click(function() {
+    deleteButton.click(function() {
         var random = Math.random();
         $(this).parent().css("list-style-type", "none").effect("explode", 2000).remove();
      });
